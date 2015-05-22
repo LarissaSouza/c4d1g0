@@ -1,8 +1,11 @@
 Desenvolvimento
 ===============
 
-Maecenas metus diam, suscipit in iaculis ac, porttitor at ipsum. Morbi accumsan nibh sapien, vitae congue ex scelerisque eget. Donec in tortor pretium, molestie tellus ut, dignissim nibh. In pellentesque sagittis felis, id varius nisi interdum quis. Nulla varius in mauris sit amet ultrices. Proin accumsan maximus ex in aliquet. Vestibulum ultrices, felis non aliquet ultricies, dui urna commodo risus, feugiat ullamcorper mi lorem quis sapien :ref:`sapien`.
+ O protocolo de camada de transporte tem o objetivo de prover comunicação lógica entre dois hospedeiros que podem ou não estarem em lados opostos do planeta, conectados por muitos roteadores. Existe uma importante relação entre as camadas de transporte e de rede, pois enquanto uma fornece conexões lógicas entre processos que executam em hosts diferentes, a outra apenas fornece a comunicação lógica entre os hospedeiros.  
+ 
+ Essa relação se dá efetivamente quando os protocolos da camada de transporte encaminham as mensagens de processos de aplicação para a camada de rede, não interferindo no modo como elas são movimentadas dentro do núcleo da rede. Os protocolos de rede podem as vezes não dar garantia aos clientes contra atrasos ou largura de banda, porém alguns serviços podem ser proporcionados pelo protocolo de transporte mesmo sem a colaboração do outro protocolo. 
 
-Nullam nec quam ac tortor facilisis aliquet. Morbi vitae mauris vel justo ultrices feugiat. Sed eu nunc euismod, faucibus turpis sit amet, pharetra ipsum. In non nisl sapien. Donec pretium blandit nisi, in elementum massa. Maecenas id velit varius, laoreet diam id, congue dolor. Curabitur sodales erat ut lectus semper tempus. Mauris dapibus lorem sit amet mi sagittis, vitae fermentum velit aliquam. 
+ A rede TCP/IP fornece dois protocolos de transporte utilizados na cama de aplicação, o UDP e o TCP, que promove um serviço opostos, um não confiável e outro confiável, respectivamente. O protocolo IP, que é um protocolo de internet, provê a comunicação lógica entre hospedeiros tentando levar os segmentos entre os hosts da melhor forma possível, mas infelizmente, sem nenhuma garantia, sendo conhecido por um serviço não confiável. 
+ 
 
 .. index:: nullam, facilisis
